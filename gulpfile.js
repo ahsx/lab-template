@@ -6,12 +6,9 @@ var gulp = require('gulp')
 	, fs = require('fs')
 	, glob = require('glob')
 	, mkdirp = require('mkdirp')
-	, bower = require('bower')
 	, Combine = require('stream-combiner')
 	, uglify = require('gulp-uglify')
 	, concat = require('gulp-concat')
-	, svgSprites = require('gulp-svg-sprites')
-	, svg = svgSprites.svg
 	, livereload = require('gulp-livereload')
 	, notify = require('gulp-notify')
 	, plumber = require('gulp-plumber')
@@ -35,22 +32,22 @@ var gulp = require('gulp')
 var styles = [
 	{
 		name:		"app",
-		output:		"web/static/styles/",
-		src: 		"web/static/styles/less/app.less",
+		output:		"statics/styles/",
+		src: 		"statics/styles/app/app.less",
 		watch:	
 		[
-					"web/static/styles/less/app/**/*.less",
-					"web/static/styles/less/app.less"
+					"statics/styles/app/**/*.less",
+					"statics/styles/app.less"
 		]
 	}
 	,{
 		name:		"vendors",
-		output:		"web/static/styles/",
-		src:		"web/static/styles/less/vendors.less",
+		output:		"statics/styles/",
+		src:		"statics/styles/vendors/vendors.less",
 		watch:	
 		[
-					"web/static/styles/less/vendors/**/*.less",
-					"web/static/styles/less/vendors.less"
+					"statics/styles/vendors/**/*.less",
+					"statics/styles/vendors.less"
 		]
 	}
 ];
@@ -163,27 +160,6 @@ gulp.task('libs.concat', function()
      	.pipe( concat(lib.name+'.min.js') )
      	.pipe( gulp.dest(lib.output) );
 	}
-});
-
-/**
- *	Convert the svg files to a svg sprites
- **/
-gulp.task('sprites', function()
-{
-	var config = 
-	{
-		  defs:true
-		, cssFile: "../styles/less/app/svg-sprite.less"
-		, svg: 
-		{
-			defs: "svg-defs.svg"
-		}
-	}
-
-	gulp.src('web/static/images/svgs/*.svg')
-		.pipe( svg(config) )
-		.pipe( gulp.dest('web/static/images/') )
-	;
 });
 
 ///////////> Dev
@@ -401,7 +377,6 @@ gulp.task('default', function()
 	console.log( '' );
 	console.log( 'Available tasks:' );
 	console.log( '' );
-	console.log( ' gulp install \t Install the frontend librairies and styles with bower.' );
 	console.log( ' gulp dev \t\t This is the task to launch on development, it will build the styles (for dev), build the scripts (for dev), Watch for changed to build the scripts and/or the styles' );
 	console.log( ' gulp styles.dev \t Process all the styles groups in the configuration section, generate the stylesheet (uncompressed), generate the source map file' );
 	console.log( ' gulp libs.dev \t\t Process the libraries groups in the configuration section, concat the files, uglify the files, generate the sourcemap' );
