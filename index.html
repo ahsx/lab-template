@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>Alexandre Masy - Lab Template</title>
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/statics/styles/vendors.css"/>
   <link rel="stylesheet" href="/statics/styles/app.css"/>
 </head>
 <body>
@@ -44,14 +45,95 @@
 
 
   <div id="main">
+
+    <!-- Toolbar -->
     <nav id="toolbar">
-      <a href="http://alexandremasy.com"><svg class="icon icon-logo-watermark" viewBox="0 0 35 32"><use xlink:href="#icon-logo-watermark"></use></svg>
-icon-logo-watermark
-</a>
+      <a class="logo" href="http://alexandremasy.com">
+        <svg class="icon icon-logo-watermark" viewBox="0 0 35 32"><use xlink:href="#icon-logo-watermark"></use></svg>
+      </a>
         
       <ul>
-        <li></li>
+        <li>
+          <a class="active" href="#" title="Options">
+            <svg class="icon icon-cog" viewBox="0 0 32 32"><use xlink:href="#icon-cog"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="About">
+            <svg class="icon icon-info" viewBox="0 0 32 32"><use xlink:href="#icon-info"></use></svg>
+          </a>
+        </li>
       </ul>
+
+      <a class="github" href="http://github.com/ahsx" title="sources"><svg class="icon icon-github" viewBox="0 0 32 32"><use xlink:href="#icon-github"></use></svg></a>
+    </nav>
+
+    <!-- options-bar -->
+    <nav id="options-bar">
+      <form>
+
+        <!-- global -->
+        <section>
+          <header class="green">Global</header>
+
+          <!-- Quantity -->
+          <fieldset>
+            <div class="row title-value">
+              <legend>Quantity</legend>
+              <output name="output">0</output>
+            </div>
+
+            <div class="row field range">
+              <a class="minus" href="#" title="-">-</a>
+              <div class="container">
+                <input type="range" name="quantity" value="0" placeholder="0" min="0" max="100" />  
+              </div>
+              <a class="plus" href="#" title="+">+</a>
+            </div>
+          </fieldset>
+
+          <!-- Theme -->
+          <fieldset>
+            <div class="row title">
+              <legend>Theme</legend>
+            </div>
+
+            <div class="row field select">
+              <select name="">
+                 <option value="">default</option>
+                 <option value="">default</option>
+                 <option value="">default</option>
+                 <option value="">default</option>
+                 <option value="">default</option>
+               </select> 
+            </div>
+          </fieldset>
+
+          <!-- Random -->
+          <fieldset>
+            <div class="row title">
+              <legend>Random ?</legend>
+            </div>
+
+            <div class="row field switch">
+              <input id="switch1" type="checkbox">
+              <label for="switch1" data-on="Yes" data-off="No"></label>
+            </div>
+          </fieldset>
+        </section>
+
+        <section>
+          <header class="blue">Controls</header>
+
+          <fieldset>
+            <div class="row controls">
+              <button class="reset field" type="button">reset</button>
+              <button class="save field" type="button">save</button>
+            </div>
+          </fieldset>
+        </section>
+
+      </form>
     </nav>
   </div>
   
