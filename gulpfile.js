@@ -70,50 +70,19 @@ var styles = [
 var libs = [
 	{
 		name:				"app",
-		output:				"web/static/libs/",
+		output:				"statics/libs/",
 		sourceMap:			true,
 		lint:				false,
 		build:				'concat',
-		watch:				'web/static/libs/app/**/*.js',
+		watch:				'statics/libs/app/**/*.js',
 		src:				
 		[
-							 'web/static/libs/app/Namespace.js'
-							,'web/static/libs/app/ContextManager.js'
-							,'web/static/libs/app/BootStrap.js'
-							,'web/static/libs/app/commands/**/*.js'
-							,'web/static/libs/app/controller/**/*.js'
-							,'web/static/libs/app/events/Event.js'
-							,'web/static/libs/app/events/**/*.js'
-							,'web/static/libs/app/models/**/*.js'
-							,'web/static/libs/app/view/**/Abstract*.js'
-							,'web/static/libs/app/view/**/*.js'
-							,'web/static/libs/app/start.js'
-		]
-	}
-	,{
-		name:				"vendors",
-		output:				"web/static/libs/",
-		template:			"application/views/includes/libs/vendors.php",
-		sourceMap:			false,
-		lint:				false,
-		build:				'concat',
-		src:				
-		[
-							 'web/static/libs/vendors/Class.js'
-							,'web/static/libs/vendors/underscore-min.js'
-							,'web/static/libs/vendors/fit.min.js'
-							,'web/static/libs/vendors/jquery.1.11.min.js'
-							,'web/static/libs/vendors/Pollyfill.js'
-							,'web/static/libs/vendors/easeljs-0.7.1.min.js'
-							,'web/static/libs/vendors/preloadjs-0.4.1.min.js'
-							,'web/static/libs/vendors/snap.svg-min.js'
-
-							,'web/static/libs/vendors/greensock/TweenMax.min.js'
-							,'web/static/libs/vendors/greensock/plugins/ScrollToPlugin.min.js'
-							,'web/static/libs/vendors/greensock/utils/Draggable.min.js'
-							
-							,'web/static/libs/vendors/ImprovedNoise.js'
-
+							 'statics/libs/app/app.js'
+							,'statics/libs/app/routes.js'
+							,'statics/libs/app/controllers/**/*.js'
+							,'statics/libs/app/directives/**/*.js'
+							,'statics/libs/app/filters/**/*.js'
+							,'statics/libs/app/services/**/*.js'
 		]
 	}
 ]

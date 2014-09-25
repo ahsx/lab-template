@@ -36,3 +36,10 @@ node_modules
 #	Styles
 #
 *.css
+
+
+
+#
+#	Libraries
+#
+statics/libs/vendor/*

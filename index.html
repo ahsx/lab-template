@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
   <title>Alexandre Masy - Lab Template</title>
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/statics/styles/vendors.css"/>
   <link rel="stylesheet" href="/statics/styles/app.css"/>
 </head>
-<body>
+<body ng-app="myApp">
   <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="275" height="32" viewBox="0 0 275 32">
     <defs>
     <g id="icon-logo-watermark">
@@ -69,7 +69,7 @@
     </nav>
 
     <!-- options-bar -->
-    <nav id="options-bar">
+    <nav id="options-bar" ng-controller="OptionsController">
 
       <!-- Options -->
       <article id="options">
@@ -77,6 +77,9 @@
           <!-- global -->
           <section>
             <header class="green">Global</header>
+
+            <!-- Quantity directive -->
+            <range id="special" min="10" max="1000" value="20"></range>
 
             <!-- Quantity -->
             <fieldset>
@@ -139,7 +142,7 @@
       </article>
 
       <article id="info">
-          <h1>Maya Hayuk - <em>bars</em></h1>
+          <h1>{{name}} Maya Hayuk - <em>bars</em></h1>
           <p>An experimentation around the work of Maya Hayuk.</p>
 
           <h2>Tools</h2>
@@ -152,6 +155,10 @@
       </article>
     </nav>
   </div>
-  
+    
+  <script type="text/javascript" src="/statics/libs/vendor/angular/angular.js"></script>
+  <script type="text/javascript" src="/statics/libs/vendor/angular-route/angular-route.js"></script>
+
+  <script type="text/javascript" src="/statics/libs/app.min.js"></script>
 </body>
 </html>
