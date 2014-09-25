@@ -355,4 +355,39 @@
 		}
 
 	}
+
+
+	// 
+	// 	Transition
+	// 
+	&[ui-view]
+	{
+		.transition(.3s);
+		&.ng-enter, &.ng-leave
+		{
+			position: absolute;
+			top: 100px;
+		}
+
+		&.ng-enter
+		{
+			.opacity(0);
+		}
+
+		&.ng-enter-active
+		{
+			.opacity(1);
+		}
+
+		&.ng-leave
+		{
+			.opacity(1);
+		}
+
+		&.ng-leave-active
+		{
+			.opacity(0);
+		}
+	}
+
 }
