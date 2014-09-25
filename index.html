@@ -1,14 +1,26 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
-  <meta charset="utf-8">
   <title>Alexandre Masy - Lab Template</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Lab Template" />
+  <meta name="keywords" content="Lab, Template" />
+  <meta name="robots" content="index, follow" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="[[Lab Template]]"/>
+  <meta property="og:url" content="http://ahsx.github.io/[[repository-name]]/"/>
+  <meta property="og:site_name" content="Lab Tempalte"/>
+  <meta property="og:type" content="blog"/>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/statics/styles/vendors.css"/>
   <link rel="stylesheet" href="/statics/styles/app.css"/>
+
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" class="defaultPage">
   <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="275" height="32" viewBox="0 0 275 32">
     <defs>
     <g id="icon-logo-watermark">
@@ -72,6 +84,14 @@
     <nav id="options-bar" class="ui-view-container" ng-controller="OptionsController" ui-view>
           
     </nav>
+
+    <div id="screenplay">
+      <h1>Title ///<em>Subtitle</em></h1>
+
+      <canvas id="display">
+        
+      </canvas>
+    </div>
   </div>
     
   <script type="text/javascript" src="/statics/libs/vendors/angular/angular.min.js"></script>
