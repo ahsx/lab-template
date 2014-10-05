@@ -1,6 +1,7 @@
 <!-- Options -->
 <article id="options">
 	<form>
+	  
 	  <!-- global -->
 	  <section>
 		<header class="green">Global</header>
@@ -21,6 +22,20 @@
 
 		<!-- Random -->
 		<switch labelOn="oui" labelOff="non" on="true" title="random ?"></switch>
+
+	  </section>
+
+	  <section>
+		<header class="red">Stage</header>
+
+		<!-- width -->
+		<range id="stageWidth" min="10" max="100" value="50" title="Width (%)"></range>
+
+		<!-- height -->
+		<range id="stageHeight" min="10" max="100" value="50" title="Height (%)"></range>
+
+		<!-- max -->
+		<switch labelOn="oui" labelOff="non" on="true" title="Maximum available ?"></switch>
 
 	  </section>
 

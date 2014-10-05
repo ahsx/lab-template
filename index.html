@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" ng-app="lab">
+<head>
+  <title>Alexandre Masy - Lab Template</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Lab Template" />
+  <meta name="keywords" content="Lab, Template" />
+  <meta name="robots" content="index, follow" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="[[Lab Template]]"/>
+  <meta property="og:url" content="http://ahsx.github.io/[[repository-name]]/"/>
+  <meta property="og:site_name" content="Lab Tempalte"/>
+  <meta property="og:type" content="blog"/>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/statics/styles/vendors.css"/>
+  <link rel="stylesheet" href="/statics/styles/app.css"/>
+
+</head>
+<body ng-app="myApp" class="defaultPage">
+  <sprite></sprite>
+
+  <div id="main">
+
+    <!-- Toolbar -->
+    <nav id="toolbar" ng-controller="ToolbarController">
+      <a class="logo" href="http://alexandremasy.com">
+        <icon label="icon-logo-watermark"></icon>
+      </a>
+        
+      <ul>
+        <li>
+          <a ui-sref="options" ng-class="{options:'active'}[state]" ng-click="state='options'" title="Options">
+            <icon label="icon-cog"></icon>
+          </a>
+        </li>
+        <li>
+          <a ui-sref="about" ng-class="{about:'active'}[state]"  ng-click="state='about'" title="About">
+            <icon label="icon-info"></icon>
+          </a>
+        </li>
+      </ul>
+
+      <a class="github" href="http://github.com/ahsx" title="sources">
+        <icon label="icon-github"></icon>
+      </a>
+    </nav>
+
+
+
+    <!-- options-bar -->
+    <nav id="options-bar" class="ui-view-container" ng-controller="OptionsController" ui-view>
+          
+    </nav>
+
+
+
+
+    <!-- Screenplay -->
+    <div id="screenplay">
+      <h1>Title ///<em>Subtitle</em></h1>
+
+      <canvas id="display">
+        
+      </canvas>
+    </div>
+  </div>
+    
+  <script type="text/javascript" src="/statics/libs/vendors/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/statics/libs/vendors/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="/statics/libs/vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <script type="text/javascript" src="/statics/libs/app.min.js"></script>
+</body>
+</html>
