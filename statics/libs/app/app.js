@@ -1,3 +1,5 @@
+APPNAME = 'lab'
+
 angular
-	.module('myApp', ['ui.router'])
+	.module( APPNAME, ['ui.router'])
 ;

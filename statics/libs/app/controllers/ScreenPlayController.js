@@ -1,19 +1,19 @@
 angular
 	.module( APPNAME )
-	.controller('OptionsController', 
-		function($scope, Options)
+	.controller('ScreenPlayController', 
+		function( $scope, $element, Options )
 		{
 			if ( Options.scope == null )
 				Options.scope = $scope;
 			else
 				$scope = Options.scope;
 
-			$scope.value = 10;
-
 			$scope.$watch('quantity', function()
 			{
 				console.log('change');
 			})
+
+			console.log('ScreenPlayController');
+			console.log(Options);
 		}
-	)
-;
+	);

@@ -1,12 +1,13 @@
 angular
-	.module('myApp')
-	.directive('dropdown', [function(){
+	.module( APPNAME )
+	.directive('dropdown', [function()
+	{
 		// Runs during compile
 		return {
 			// name: '',
 			// priority: 1,
 			// terminal: true,
-			scope: {}, // {} = isolate, true = child, false/undefined = no change
+			scope: true, // {} = isolate, true = child, false/undefined = no change
 			controller: 
 				function($scope, $element, $attrs, $transclude) 
 				{

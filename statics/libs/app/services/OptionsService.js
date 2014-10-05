@@ -1,6 +1,8 @@
 angular
-	.module('myApp')
-	.service('OptionsService', function()
+	.module( APPNAME )
+	.service('Options', function()
 	{
-	
-	})
+		return {
+			scope: null
+		}
+	});

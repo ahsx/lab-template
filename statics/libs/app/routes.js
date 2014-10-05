@@ -1,5 +1,7 @@
+"use strict";
+
 angular
-	.module('myApp')
+	.module( APPNAME )
 	.config(function($stateProvider, $urlRouterProvider) {
 
 		$urlRouterProvider.otherwise("/options");
