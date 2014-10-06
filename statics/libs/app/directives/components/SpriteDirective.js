@@ -18,8 +18,8 @@ angular
 			// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
 			restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
 			// template: '',
-			templateUrl: '/statics/partials/directives/svg-sprite.html',
-			replace: true,
+			templateUrl: getPartial('directives/svg-sprite.html'),
+			// replace: true,
 			// transclude: true,
 			// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
 			link: function($scope, iElm, iAttrs, controller) {

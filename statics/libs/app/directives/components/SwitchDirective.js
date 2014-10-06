@@ -18,7 +18,7 @@ angular
 			// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
 			restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
 			// template: '',
-			templateUrl: '/statics/partials/directives/switch.html',
+			templateUrl: getPartial('directives/switch.html'),
 			// replace: true,
 			// transclude: true,
 			// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),

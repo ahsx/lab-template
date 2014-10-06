@@ -4,16 +4,14 @@
   <title>Alexandre Masy - Lab Template</title>
 
   <meta charset="utf-8">
-  <meta name="description" content="Lab Template" />
-  <meta name="keywords" content="Lab, Template" />
-  <meta name="robots" content="index, follow" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="[[Lab Template]]"/>
-  <meta property="og:url" content="http://ahsx.github.io/[[repository-name]]/"/>
-  <meta property="og:site_name" content="Lab Tempalte"/>
-  <meta property="og:type" content="blog"/>
+  <description 
+    title="Lab - Title"
+    keywords="love, hate, sex, drug, rocknroll"
+    url="http://github.com/ahsx/"
+  >This is the description of the template
+  </description>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/statics/styles/vendors.css"/>
@@ -25,35 +23,25 @@
 
   <div id="main">
 
-    <!-- Toolbar -->
-    <nav id="toolbar" ng-controller="ToolbarController">
-      <a class="logo" href="http://alexandremasy.com">
-        <icon label="icon-logo-watermark"></icon>
-      </a>
-        
-      <ul>
-        <li>
-          <a ui-sref="options" ng-class="{options:'active'}[state]" ng-click="state='options'" title="Options">
-            <icon label="icon-cog"></icon>
-          </a>
-        </li>
-        <li>
-          <a ui-sref="about" ng-class="{about:'active'}[state]"  ng-click="state='about'" title="About">
-            <icon label="icon-info"></icon>
-          </a>
-        </li>
-      </ul>
+    <!-- Start::Toolbar -->
+    <toolbar>
+      
+      <toolbaritem href="/options" title="Options">
+        <icon label="icon-cog"></icon>
+      </toolbaritem>
 
-      <a class="github" href="http://github.com/ahsx" title="sources">
-        <icon label="icon-github"></icon>
-      </a>
-    </nav>
+      <toolbaritem href="/about" title="About" icon="icon-info">
+        <icon label="icon-info"></icon>
+      </toolbaritem>
+
+    </toolbar>
+    <!-- End::Toolbar -->
 
 
 
     <!-- options-bar -->
-    <nav id="options-bar" class="ui-view-container" ng-controller="OptionsController" ui-view>
-          
+    <nav id="options-bar" class="ui-view-container" ui-view>
+        
     </nav>
 
 
