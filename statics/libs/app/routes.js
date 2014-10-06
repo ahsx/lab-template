@@ -2,9 +2,12 @@
 
 angular
 	.module( APPNAME )
-	.config(function($stateProvider, $urlRouterProvider) {
+	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-		$urlRouterProvider.otherwise("/options");
+		// $urlRouterProvider.otherwise("/options");
+
+		if ( window.history && window.history.pushState )
+			$locationProvider.html5Mode(true);
 
 		$stateProvider
 			.state('options', {
@@ -18,4 +21,4 @@ angular
 				url: '/about',
 				templateUrl: '/statics/partials/views/optionsbar/about.html'
 			})
-	});
+	}]);

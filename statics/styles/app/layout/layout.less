@@ -16,4 +16,33 @@ body
 #main
 {
 	height: 100%;
+
+	.pusher
+	{
+		height: 100%;
+		width: 100%;
+		.transition(.3s);
+		background: @col_white;
+		z-index: 99;
+	}
+
+	&.open
+	{
+		&.about
+		{
+			.pusher
+			{
+				.transform(translateX(60%));
+			}
+		}
+
+		&.options
+		{
+			.pusher
+			{
+				.transform(translateX(300px));
+			}
+		}
+	}
+
 }

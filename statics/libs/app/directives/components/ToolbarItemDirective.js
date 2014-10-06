@@ -1,6 +1,6 @@
 angular
 	.module( APPNAME )
-	.directive('toolbaritem', [function(){
+	.directive('toolbaritem', ['$rootScope', function($rootScope){
 		// Runs during compile
 		return {
 			// name: '',
@@ -13,6 +13,24 @@ angular
 				$scope.href = $attrs.href;
 				$scope.title = $attrs.title;
 				$scope.icon = $attrs.icon;
+
+				$scope.itemClick = function( $event, side )
+				{
+					$event.preventDefault();
+
+					var side = side.substr(1);
+					console.log(side);
+
+					if ( side == $scope.openSlide )
+					{
+						$rootScope.open = !$rootScope.open;
+					}
+					else
+					{
+						$rootScope.open = true;
+						$rootScope.openSlide = side;
+					}
+				}
 			},
 			// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
 			restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment

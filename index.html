@@ -1,13 +1,12 @@
 <!doctype html>
 <html lang="en" ng-app="lab">
 <head>
-  <title>Alexandre Masy - Lab Template</title>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <description 
     title="Lab - Title"
+    subtitle="Template"
     keywords="love, hate, sex, drug, rocknroll"
     url="http://github.com/ahsx/"
   >This is the description of the template
@@ -18,43 +17,122 @@
   <link rel="stylesheet" href="/statics/styles/app.css"/>
 
 </head>
-<body ng-app="myApp" class="defaultPage">
+<body class="defaultPage" ng-controller="AppController">
   <sprite></sprite>
 
-  <div id="main">
+  <div id="main" class="{{openSlide}}" ng-class="{open:open}">
 
-    <!-- Start::Toolbar -->
-    <toolbar>
-      
-      <toolbaritem href="/options" title="Options">
-        <icon label="icon-cog"></icon>
-      </toolbaritem>
+    <!-- Start::About -->
+    <article id="about" class="pane">
+      <div class="content">
+        <h1>Title /// <em>Subtitle</em></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-      <toolbaritem href="/about" title="About" icon="icon-info">
-        <icon label="icon-info"></icon>
-      </toolbaritem>
+        <h2>Tools</h2>
+        <ul>
+          <li><a href="#" title="">jQuery,</a></li>
+          <li><a href="#" title="">EaselJS,</a></li>
+          <li><a href="#" title="">Dat.gui,</a></li>
+          <li><a href="#" title="">Underscore</a></li>
+        </ul>
+      </div>
+    </article>
+    <!-- End::About -->
 
-    </toolbar>
-    <!-- End::Toolbar -->
 
-
-
-    <!-- options-bar -->
-    <nav id="options-bar" class="ui-view-container" ui-view>
+    <!-- Start::Options -->
+    <article id="options" class="pane">
+      <form class="content">
         
-    </nav>
+        <!-- global -->
+        <section>
+          <header class="green">Global</header>
+
+          <!-- Quantity -->
+          <range id="special" min="10" max="100" value="50" title="Quantity"></range>
+
+          <range id="special" min="0" max="500" value="100" title="Bizoux"></range>
+
+          <!-- Theme -->
+          <dropdown title="Theme">
+            <option value="">default</option>
+            <option value="">default2</option>
+            <option value="">default3</option>
+            <option value="">default4</option>
+            <option value="">default5</option>
+          </dropdown>
+
+          <!-- Random -->
+          <switch labelOn="oui" labelOff="non" on="true" title="random ?"></switch>
+
+        </section>
+
+        <section>
+          <header class="red">Stage</header>
+
+          <!-- width -->
+          <range id="stageWidth" min="10" max="100" value="50" title="Width (%)"></range>
+
+          <!-- height -->
+          <range id="stageHeight" min="10" max="100" value="50" title="Height (%)"></range>
+
+          <!-- max -->
+          <switch labelOn="oui" labelOff="non" on="true" title="Maximum available ?"></switch>
+
+        </section>
+
+        <section>
+          <header class="blue">Controls</header>
+
+          <fieldset>
+            <div class="row controls">
+            <button class="reset field" type="button">reset</button>
+            <button class="save field" type="button">save</button>
+            </div>
+          </fieldset>
+        </section>
+
+      </form>
+    </article>
+    <!-- End::Options -->
 
 
+    <!-- Start::Pusher -->
+    <div class="pusher">
 
-
-    <!-- Screenplay -->
-    <div id="screenplay">
-      <h1>Title ///<em>Subtitle</em></h1>
-
-      <canvas id="display">
+      <!-- Start::Toolbar -->
+      <toolbar>
         
-      </canvas>
+        <toolbaritem href="#options" title="Options">
+          <icon label="icon-cog"></icon>
+        </toolbaritem>
+
+        <toolbaritem href="#about" title="About">
+          <icon label="icon-eye"></icon>
+        </toolbaritem>
+
+      </toolbar>
+      <!-- End::Toolbar -->
+
+
+      <!-- Start::Screenplay -->
+      <div id="screenplay">
+        <h1>{{title}} ///<em>{{subtitle}}</em></h1>
+
+        <canvas id="display">
+          
+        </canvas>
+      </div>
+      <!-- End::Screenplay -->
+
     </div>
+    <!-- End::Pusher -->
+
   </div>
     
   <script type="text/javascript" src="/statics/libs/vendors/angular/angular.min.js"></script>
