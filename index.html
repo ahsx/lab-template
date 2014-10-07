@@ -134,12 +134,22 @@
 
       <!-- Start::Screenplay -->
       <div id="screenplay">
-        <h1>{{title}} ///<em>{{subtitle}}</em></h1>
-        <span class="icon-cog"></span>
+        <div class="legend">
+          <h1>{{title}} ///<em>{{subtitle}}</em></h1>
+        </div>
 
-        <canvas id="display">
+        <div class="container">
           
-        </canvas>
+          <div class="border">
+            <div class="cut topleft"></div>
+            <div class="cut topright"></div>
+            <div class="cut bottomright"></div>
+            <div class="cut bottomleft"></div>
+            <canvas id="display"></canvas>
+          </div>
+        </div>
+
+
       </div>
       <!-- End::Screenplay -->
 
