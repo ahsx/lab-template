@@ -7,7 +7,7 @@ angular
 			// name: '',
 			// priority: 1,
 			// terminal: true,
-			// scope: true, // {} = isolate, true = child, false/undefined = no change
+			scope: {}, // {} = isolate, true = child, false/undefined = no change
 			controller: 
 				function($scope, $element, $attrs, $transclude) 
 				{

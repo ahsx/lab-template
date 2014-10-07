@@ -17,7 +17,7 @@ angular
 
 				$rootScope.$watch('openSlide', function(newVal, oldVal)
 				{
-					$scope.active = $rootScope.openSlide == $scope.side
+					$scope.active = $rootScope.openSlide == $scope.side;
 				});
 
 				$scope.itemClick = function( $event, side )
@@ -33,6 +33,9 @@ angular
 						$rootScope.open = true;
 						$rootScope.openSlide = $scope.side;
 					}
+
+					if ( !$rootScope.open )
+						$rootScope.openSlide = null;
 				}
 			},
 			// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements

@@ -3,43 +3,78 @@
 	color: @col_white;
 	font-size: 1.2em;
 
-	h1
+	div.clearfix
 	{
-		font-size: 2em;
-		text-transform: uppercase;
-		line-height: 1em;
+		margin-bottom: 50px;
 	}
 
-	h2
+	ul.left
 	{
-		font-size: 1.2em;
-		text-transform: uppercase;
+		padding: 10px 0px;
 		margin: 0px;
-		text-decoration: underline;
-	}
-
-	p
-	{
-		font-size: 1em;
-		line-height: 1.2em;
-		color: @col_about_text;
-	}
-
-	ul
-	{
-		list-style: none;
-		margin: 0px;
-		padding: 0px;
+		background: @col_toolbar_background;
+		width: 60px;
+		display: block;
+		float: left;
+		overflow: hidden;
 
 		li
 		{
-			display: inline-block;
+			list-style: none;
 
 			a
 			{
+				display: inline-block;
 				color: @col_white;
+				.opacity(.5);
+				.transition(.3s);
+
+				padding: 10px 20px;
+
+				svg
+				{
+					width: 20px;
+					height: 20px;
+				}
+
+				&:hover
+				{
+					.opacity(1);
+				}
 			}
 		}
 	}
 
+	h1
+	{
+		font-size: 7em;
+		text-transform: uppercase;
+		line-height: .9em;
+	}
+
+	h1, h2
+	{
+		display: block;
+		float: right;
+		width: ~"calc(100% - 100px)";
+		margin: 0px;
+
+		font-weight: 300;
+		text-align: right;
+	}
+
+	h2
+	{
+		font-size: 3em;
+		text-transform: initial;
+	}
+
+	p
+	{
+		font-size: 1.3em;
+		line-height: 1.6em;
+		color: @col_about_text;
+		text-align: right;
+		margin-top: 20px;
+	}
 }
