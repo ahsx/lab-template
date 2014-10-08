@@ -85,21 +85,6 @@
 			width: 49%;
 			.transition(.3s);
 
-			&.save
-			{
-				background-image: url("@{spr_arrow-down}");
-			}
-			&.reset
-			{
-				background-image: url("@{spr_loop}");
-			}
-			&.save, &.reset
-			{
-				background-repeat: no-repeat;
-				background-position:  15% 50%;
-				background-size: 10px;
-			}
-
 			&:hover
 			{
 				background-color: @col_form_input_active;
@@ -191,7 +176,6 @@
 			&.select
 			{
 				width: 100%;
-				background: @col_form_input_background url("@{spr_arrow-down2}") no-repeat 95% 50%;
 				cursor: pointer;
 				.transition(.3s);
 
