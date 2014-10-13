@@ -3,5 +3,7 @@ angular
 	.controller('AppController', ['$rootScope', '$scope', function($rootScope, $scope)
 	{
 		$rootScope.open = false;
-		$rootScope.openSide = 'about';	
+		$rootScope.openSide = 'options';
+
+		$scope.options = {};
 	}]);

@@ -20,7 +20,7 @@
 <body class="defaultPage" ng-controller="AppController">
   <sprite></sprite>
 
-  <div id="main" class="{{openSlide}}" ng-class="{open:open}">
+  <div id="main" class="open options {{openSlide}}" ng-class="{open:open}">
 
     <div class="alternate">
       
@@ -66,21 +66,46 @@
             <header class="green">Global</header>
 
             <!-- Quantity -->
-            <range id="special" min="10" max="100" value="50" title="Quantity"></range>
+            <range 
+              id="special" 
+              min="10" 
+              max="100" 
+              value="50" 
+              title="Quantity" 
+              model="options.quantity">
+            </range>
 
-            <range id="special" min="0" max="500" value="100" title="Bizoux"></range>
+            <!-- Bizoux -->
+            <range 
+              id="special" 
+              min="0" 
+              max="500" 
+              value="100" 
+              title="Bizoux" 
+              model="options.bizoux">
+            </range>
 
             <!-- Theme -->
-            <dropdown title="Theme">
-              <option value="">default</option>
-              <option value="">default2</option>
-              <option value="">default3</option>
-              <option value="">default4</option>
-              <option value="">default5</option>
+            <dropdown 
+              title="Theme" 
+              model="options.theme"
+            >
+              <option value="a" selected="selected">default</option>
+              <option value="b">default2</option>
+              <option value="c">default3</option>
+              <option value="d">default4</option>
+              <option value="e">default5</option>
             </dropdown>
 
             <!-- Random -->
-            <switch labelOn="oui" labelOff="non" on="true" title="random ?"></switch>
+            <switch 
+              labelOn="oui" 
+              labelOff="non" 
+              on="true" 
+              title="random ?"
+              model="options.random"
+            >
+            </switch>
 
           </section>
 
@@ -88,13 +113,32 @@
             <header class="red">Stage</header>
 
             <!-- width -->
-            <range id="stageWidth" min="10" max="100" value="50" title="Width (%)"></range>
+            <range 
+              min="10" 
+              max="100" 
+              value="50" 
+              title="Width (%)"
+              model="options.stageWidth"
+            ></range>
 
             <!-- height -->
-            <range id="stageHeight" min="10" max="100" value="50" title="Height (%)"></range>
+            <range 
+              id="stageHeight" 
+              min="10" 
+              max="100" 
+              value="50" 
+              title="Height (%)"
+              model="options.stageHeight"
+            ></range>
 
             <!-- max -->
-            <switch labelOn="oui" labelOff="non" on="true" title="Maximum available ?"></switch>
+            <switch 
+              labelOn="oui" 
+              labelOff="non" 
+              on="true" 
+              title="Maximum available ?"
+              model="options.fullscreen"
+            ></switch>
 
           </section>
 
@@ -133,7 +177,7 @@
 
 
       <!-- Start::Screenplay -->
-      <div id="screenplay">
+      <div id="screenplay" ng-controller="ScreenplayController">
         <div class="legend">
           <h1>{{title}} ///<em>{{subtitle}}</em></h1>
         </div>

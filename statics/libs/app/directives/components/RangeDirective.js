@@ -6,15 +6,16 @@ angular
 			// name: '',
 			// priority: 1,
 			// terminal: true,
-			scope: {}, // {} = isolate, true = child, false/undefined = no change
+			scope: {
+				min: 	'@',
+				max: 	'@',
+				title: 	'@',
+				value: 	'=model'
+			}, // {} = isolate, true = child, false/undefined = no change
 			controller:
 				function($scope, $element, $attrs, $transclude) 
 				{
-					$scope.min = ($attrs.min | 0 ) || 0;
-					$scope.max = ($attrs.max | 0 ) || 10;
-					$scope.value = ($attrs.value | 0 )|| 0;
-					$scope.title = $attrs.title;
-
+					$scope.value = $attrs.value || 0;
 					$scope.plus = function()
 					{
 						var n = ($scope.value | 0) + 1;

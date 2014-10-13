@@ -7,7 +7,15 @@
   <div class="row field range">
     <a class="minus" href="#" title="-" ng-click="minus()">-</a>
     <div class="container">
-      <input type="range" name="quantity" value="{{value}}" ng-model="value" placeholder="0" min="{{min}}" max="{{max}}" />  
+      <input 
+        type="range" 
+        name="quantity" 
+        value="{{value}}" 
+        min="{{min}}" 
+        max="{{max}}" 
+        placeholder="0" 
+        ng-model="value"
+      />  
     </div>
     <a class="plus" href="#" title="+" ng-click="plus()">+</a>
   </div>
