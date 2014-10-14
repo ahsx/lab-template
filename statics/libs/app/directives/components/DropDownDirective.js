@@ -19,8 +19,7 @@ angular
 			// replace: true,
 			transclude: true,
 			// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-			link: function($scope, iElm, iAttrs, controller) {
-				console.log(iAttrs);
-			}
+			// link: function($scope, iElm, iAttrs, controller) {
+			// }
 		};
 	}]);

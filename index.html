@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="lab">
+<html lang="en" ng-app="lab" ng-controller="AppController">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="/statics/styles/app.css"/>
 
 </head>
-<body class="defaultPage" ng-controller="AppController">
+<body class="defaultPage">
   <sprite></sprite>
 
   <div id="main" class="open options {{openSlide}}" ng-class="{open:open}">
@@ -131,15 +131,6 @@
               model="options.stageHeight"
             ></range>
 
-            <!-- max -->
-            <switch 
-              labelOn="oui" 
-              labelOff="non" 
-              on="true" 
-              title="Maximum available ?"
-              model="options.fullscreen"
-            ></switch>
-
           </section>
 
           <section>
@@ -148,7 +139,13 @@
             <fieldset>
               <div class="row controls">
               <button class="reset field" type="button">reset</button>
-              <button class="save field" type="button">save</button>
+              <button 
+                href="{{saveURL}}" 
+                class="button save field" 
+                type="button" 
+                download="file.png" 
+                ng-click="saveCanvas()"
+                >save</button>
               </div>
             </fieldset>
           </section>
@@ -204,6 +201,8 @@
   <script type="text/javascript" src="/statics/libs/vendors/angular/angular.min.js"></script>
   <script type="text/javascript" src="/statics/libs/vendors/angular-animate/angular-animate.min.js"></script>
   <script type="text/javascript" src="/statics/libs/vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="/statics/libs/vendors/jQuery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/statics/libs/vendors/easeljs/lib/easeljs-NEXT.min.js"></script>
 
   <script type="text/javascript" src="/statics/libs/app.min.js"></script>
 </body>

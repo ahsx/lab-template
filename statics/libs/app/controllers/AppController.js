@@ -4,6 +4,5 @@ angular
 	{
 		$rootScope.open = false;
 		$rootScope.openSide = 'options';
-
-		$scope.options = {};
+		$rootScope.options = {};
 	}]);
