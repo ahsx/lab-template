@@ -18,21 +18,21 @@ angular
 			// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
 			restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
 			// template: '',
-			templateUrl: getPartial('directives/description.html'),
+			// templateUrl: getPartial('directives/description.html'),
 			// replace: true,
-			transclude: true,
-			compile: function(tElement, tAttrs, transclude)
-			{ 
-				return {
-					pre: function($scope)
-					{
-						transclude($scope, function(clone)
-						{
-							$scope.description = clone[0].textContent || 'Warning: no application description';
-						})
-					}
-				}
-			},
+			// transclude: true,
+			// compile: function(tElement, tAttrs, transclude)
+			// { 
+			// 	return {
+			// 		pre: function($scope)
+			// 		{
+			// 			transclude($scope, function(clone)
+			// 			{
+			// 				$scope.description = clone[0].textContent || 'Warning: no application description';
+			// 			})
+			// 		}
+			// 	}
+			// },
 			link: function($scope, iElm, iAttrs, controller) {
 				
 			}

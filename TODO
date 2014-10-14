@@ -1,8 +1,6 @@
 
 # Screenplay
 
-- AutoSize the canvas related to the params
-- Save the canvas to a png
 - Reset the value to default
 - Include a framerate tool
 
