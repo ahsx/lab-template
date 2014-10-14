@@ -5,4 +5,9 @@ angular
 		$rootScope.open = false;
 		$rootScope.openSide = 'options';
 		$rootScope.options = {};
+
+		$scope.saveToClipboard = function( text )
+		{
+			window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+		}
 	}]);

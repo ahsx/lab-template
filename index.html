@@ -40,16 +40,16 @@
           <div class="clearfix">
             <ul class="social left">
               <li>
-                <a href="#" title="Facebook"><icon label="icon-facebook"></icon></a>
+                <a href="//facebook.com/sharer/sharer.php?u={{url}}" title="Facebook" target="_blank"><icon label="icon-facebook"></icon></a>
               </li>
               <li>
-                <a href="#" title="Twitter"><icon label="icon-twitter"></icon></a>
+                <a href="https://twitter.com/intent/tweet?original_referer={{url}}&text={{title}} /// {{subtitle}}&tw_p=tweetbutton&url={{url}}&via=beg_sleep&related=beg_sleep" title="Twitter" target="_blank"><icon label="icon-twitter"></icon></a>
               </li>
               <li>
-                <a href="#" title="Mail"><icon label="icon-paperplane"></icon></a>
+                <a href="mailto:?subject={{title}} /// {{subtitle}}&body={{url}}" title="Mail"><icon label="icon-paperplane"></icon></a>
               </li>
               <li>
-                <a href="#" title="Link"><icon label="icon-link"></icon></a>
+                <a href="#" title="Link" ng-click="saveToClipboard(url)"><icon label="icon-link"></icon></a>
               </li>
             </ul>
 
