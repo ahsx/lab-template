@@ -1,7 +1,9 @@
 {
-  "name": "Lab-Template",
+  "name": "generator-lab-template",
   "version": "0.0.1",
   "private": true,
+  "description": "Template for the lab",
+  "keywords": ["yeoman-generator"],
   "scripts": {},
   "devDependencies": {
     "gulp": "~3.5.2",
@@ -17,7 +19,7 @@
     "gulp-notify": "^1.2.5",
     "gulp-plumber": "^0.6.1"
   },
-  
   "dependencies": {
+    "yeoman-generator": "^0.17.7"
   }
 }

@@ -1,7 +1,7 @@
 <fieldset>
   <div class="row title-value">
     <legend>{{title}}</legend>
-    <output name="output">{{value}}</output>
+    <output name="output">{{value | number:precision}}</output>
   </div>
 
   <div class="row field range">
@@ -13,6 +13,7 @@
         value="{{value}}" 
         min="{{min}}" 
         max="{{max}}" 
+        step="{{step}}"
         placeholder="0" 
         ng-model="value"
       />  
