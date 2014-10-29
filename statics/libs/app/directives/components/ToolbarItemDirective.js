@@ -24,6 +24,8 @@ angular
 				{
 					$event.preventDefault();
 
+					ga('send', 'event', 'Toolbar', 'Click', side);
+
 					if ( $scope.side == $scope.openSlide )
 					{
 						$rootScope.open = !$rootScope.open;

@@ -40,13 +40,13 @@
           <div class="clearfix">
             <ul class="social left">
               <li>
-                <a href="//facebook.com/sharer/sharer.php?u={{demo}}" title="Facebook" target="_blank"><icon label="icon-facebook"></icon></a>
+                <a href="//facebook.com/sharer/sharer.php?u={{demo}}" title="Facebook" target="_blank" ng-click="trackSocial('facebook', 'share')"><icon label="icon-facebook"></icon></a>
               </li>
               <li>
-                <a href="https://twitter.com/intent/tweet?original_referer={{demo}}&text={{title}} /// {{subtitle}}&tw_p=tweetbutton&url={{demo}}&via=beg_sleep&related=beg_sleep" title="Twitter" target="_blank"><icon label="icon-twitter"></icon></a>
+                <a href="https://twitter.com/intent/tweet?original_referer={{demo}}&text={{title}} /// {{subtitle}}&tw_p=tweetbutton&url={{demo}}&via=beg_sleep&related=beg_sleep" title="Twitter" target="_blank" ng-click="trackSocial('twitter', 'tweet')"><icon label="icon-twitter"></icon></a>
               </li>
               <li>
-                <a href="mailto:?subject={{title}} /// {{subtitle}}&body={{demo}}" title="Mail"><icon label="icon-paperplane"></icon></a>
+                <a href="mailto:?subject={{title}} /// {{subtitle}}&body={{demo}}" title="Mail"><icon label="icon-paperplane" ng-click="trackSocial('mailto', 'send')"></icon></a>
               </li>
               <li>
                 <a href="#" title="Link" ng-click="saveToClipboard(demo)"><icon label="icon-link"></icon></a>
