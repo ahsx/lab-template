@@ -5,7 +5,7 @@ getPartial = function( path )
 } 
 
 angular
-	.module( APPNAME, ['ui.router'])
+	.module( APPNAME, [])
 ;
 
 console.group('Good day to you sir!');
