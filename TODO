@@ -1,5 +1,17 @@
+# Global
+- vendors into one file from the gulp
+- Improve the responsive
+- Message for mobile
+
+# About
+- handle the links
 
 # Screenplay
 
 - Reset the value to default
 - Include a framerate tool
+
+# Analytics
+
+- Integrate google Analytics
+- Add event handling

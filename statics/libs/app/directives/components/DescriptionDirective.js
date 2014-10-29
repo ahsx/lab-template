@@ -11,7 +11,8 @@ angular
 			{
 				$scope.title = $attrs.title || 'Warning: untitled application';
 				$scope.subtitle = $attrs.subtitle || '';
-				$scope.url = $attrs.url || 'Warning: no url defined';
+				$scope.github = $attrs.github || 'Warning: no url defined';
+				$scope.demo = $attrs.demo || 'Warning: no url defined';
 				$scope.keywords = $attrs.keywords || 'Warning, no, keywords';
 				$scope.image = $attrs.image || 'Warning: no image defined';
 			},

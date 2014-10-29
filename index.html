@@ -4,27 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Super title // Subtitle</title>
-  <meta name="description" content="This is the description of the template" />
-  <meta name="keywords" content="love, hate, sex, drug, rocknroll" />
+  <title>[title] // [subtitle]</title>
+  <meta name="description" content="[description]" />
+  <meta name="keywords" content="[keywords]" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="Super title // Subtitle"/>
-  <meta property="og:url" content="http://github.com/ahsx/"/>
-  <meta property="og:site_name" content="Super title // Subtitle"/>
+  <meta property="og:title" content="[title] // [subtitle]"/>
+  <meta property="og:url" content="http://ahsx.github.com/[repository]"/>
+  <meta property="og:site_name" content="[title] // [subtitle]"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:image" content="{{image}}"/>
+  <meta property="og:image" content="[image]"/>
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/statics/styles/vendors.css"/>
   <link rel="stylesheet" href="/statics/styles/app.css"/>
 
   <description 
-    title="Super title"
-    subtitle="Subtitle"
-    keywords="love, hate, sex, drug, rocknroll"
-    url="http://github.com/ahsx/"
-  >This is the description of the template
+    title="[title]"
+    subtitle="[subtitle]"
+    github="http://github.com/ahsx/"
+    demo="http://ahsx.github.com/[repository]/"
+  >
   </description>
 </head>
 <body class="defaultPage">
@@ -40,16 +40,16 @@
           <div class="clearfix">
             <ul class="social left">
               <li>
-                <a href="//facebook.com/sharer/sharer.php?u={{url}}" title="Facebook" target="_blank"><icon label="icon-facebook"></icon></a>
+                <a href="//facebook.com/sharer/sharer.php?u={{demo}}" title="Facebook" target="_blank"><icon label="icon-facebook"></icon></a>
               </li>
               <li>
-                <a href="https://twitter.com/intent/tweet?original_referer={{url}}&text={{title}} /// {{subtitle}}&tw_p=tweetbutton&url={{url}}&via=beg_sleep&related=beg_sleep" title="Twitter" target="_blank"><icon label="icon-twitter"></icon></a>
+                <a href="https://twitter.com/intent/tweet?original_referer={{demo}}&text={{title}} /// {{subtitle}}&tw_p=tweetbutton&url={{demo}}&via=beg_sleep&related=beg_sleep" title="Twitter" target="_blank"><icon label="icon-twitter"></icon></a>
               </li>
               <li>
-                <a href="mailto:?subject={{title}} /// {{subtitle}}&body={{url}}" title="Mail"><icon label="icon-paperplane"></icon></a>
+                <a href="mailto:?subject={{title}} /// {{subtitle}}&body={{demo}}" title="Mail"><icon label="icon-paperplane"></icon></a>
               </li>
               <li>
-                <a href="#" title="Link" ng-click="saveToClipboard(url)"><icon label="icon-link"></icon></a>
+                <a href="#" title="Link" ng-click="saveToClipboard(demo)"><icon label="icon-link"></icon></a>
               </li>
             </ul>
 
